@@ -6,6 +6,18 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
 
+
+  ###### "resources" gives me all of these ######
+  # article_index GET    /article(.:format)          article#index
+  #               POST   /article(.:format)          article#create
+  #   new_article GET    /article/new(.:format)      article#new
+  #  edit_article GET    /article/:id/edit(.:format) article#edit
+  #       article GET    /article/:id(.:format)      article#show
+  #               PATCH  /article/:id(.:format)      article#update
+  #               PUT    /article/:id(.:format)      article#update
+  #               DELETE /article/:id(.:format)      article#destroy
+  resources :articles
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
